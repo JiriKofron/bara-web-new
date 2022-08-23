@@ -25,7 +25,7 @@ export default {
   max-width: 30rem;
   margin: 1rem auto;
 
-  @include lg {
+  @include md {
     font-size: 1.4rem;
     max-width: 15rem;
   }

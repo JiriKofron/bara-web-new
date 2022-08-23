@@ -133,7 +133,7 @@ export default {
 
 <style scoped lang="scss">
 .navbar {
-  max-width: 1400px;
+  max-width: 1600px;
 
   &__ham {
     position: fixed;
@@ -164,7 +164,7 @@ export default {
     flex-direction: row;
     align-items: center;
     justify-content: end;
-    width: 50%;
+    width: 60%;
     margin-right: 1rem;
 
     .nav-link {

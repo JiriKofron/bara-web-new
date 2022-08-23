@@ -53,8 +53,12 @@ section {
       justify-content: center;
 
       h1 {
-        font-size: 4rem;
+        font-size: 2.5rem;
         color: $darkest-blue;
+
+        @include lg {
+          font-size: 4rem;
+        }
       }
     }
 
@@ -64,9 +68,13 @@ section {
       opacity: 0.6;
 
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 200;
         color: $darkest-blue;
+
+        @include lg {
+          font-size: 1.5rem;
+        }
       }
     }
   }

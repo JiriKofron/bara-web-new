@@ -47,6 +47,7 @@ section {
   &__img {
     width: 100%;
     z-index: 1;
+    margin-top: -4rem;
   }
 
   &__headline {
