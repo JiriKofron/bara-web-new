@@ -38,14 +38,14 @@
           class="form-control"
           v-model="contact.name"
         />
-        <span v-if="v$.contact.name.$error" class="contact-form__error-msg">
+        <div v-if="v$.contact.name.$error" class="contact-form__error-msg">
           <font-awesome-icon
             icon="fa-solid fa-circle-exclamation"
             size="lg"
             class="pe-2"
           />
           Zadejte své jméno
-        </span>
+        </div>
 
         <label for="email" class="form-label">Email:</label>
         <input
@@ -54,14 +54,14 @@
           class="form-control"
           v-model="contact.email"
         />
-        <span v-if="v$.contact.email.$error" class="contact-form__error-msg"
-          ><font-awesome-icon
+        <div v-if="v$.contact.email.$error" class="contact-form__error-msg">
+          <font-awesome-icon
             icon="fa-solid fa-circle-exclamation"
             size="lg"
             class="pe-2"
           />
           Zadejte svůj email
-        </span>
+        </div>
 
         <label for="mobile" class="form-label">Telefon: (nepovinné)</label>
         <input
@@ -78,14 +78,14 @@
           rows="5"
           v-model="contact.text"
         />
-        <span v-if="v$.contact.text.$error" class="contact-form__error-msg"
-          ><font-awesome-icon
+        <div v-if="v$.contact.text.$error" class="contact-form__error-msg">
+          <font-awesome-icon
             icon="fa-solid fa-circle-exclamation"
             size="lg"
             class="pe-2"
           />
-          Zapomněl/a jste napsat svou zprávu...</span
-        >
+          Zapomněl/a jste napsat svou zprávu...
+        </div>
 
         <VueRecaptcha
           class="contact-form__recaptcha"
