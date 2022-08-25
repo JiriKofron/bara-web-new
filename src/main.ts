@@ -19,9 +19,17 @@ import { faFileMedical } from "@fortawesome/free-solid-svg-icons";
 import { faHandHoldingHand } from "@fortawesome/free-solid-svg-icons";
 import { faMobile } from "@fortawesome/free-solid-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
+import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
-library.add(faPeopleGroup, faFileMedical, faHandHoldingHand, faMobile, faAt);
+library.add(
+  faPeopleGroup,
+  faFileMedical,
+  faHandHoldingHand,
+  faMobile,
+  faAt,
+  faCircleExclamation
+);
 
 createApp(App)
   .component("font-awesome-icon", FontAwesomeIcon)
