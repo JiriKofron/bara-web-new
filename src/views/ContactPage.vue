@@ -134,7 +134,7 @@ export default {
         text: "",
       },
       isSending: false,
-      messageSent: true,
+      messageSent: false,
       formReady: false,
       // captcha: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
       captcha: "6LcgwZwhAAAAAEUE78LrBlcRk2TMTYhLVThG-xao",
