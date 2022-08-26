@@ -89,6 +89,7 @@
 
         <VueRecaptcha
           class="contact-form__recaptcha"
+          ref="recaptcha"
           :sitekey="getKey"
           :load-recaptcha-script="true"
           @verify="handleSuccess"
@@ -133,8 +134,9 @@ export default {
         text: "",
       },
       isSending: false,
-      messageSent: false,
+      messageSent: true,
       formReady: false,
+      // captcha: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
       captcha: "6LcgwZwhAAAAAEUE78LrBlcRk2TMTYhLVThG-xao",
     };
   },
@@ -157,23 +159,33 @@ export default {
       return this.captcha;
     },
     isFormReady() {
-      return this.formReady || !this.isSending;
+      return this.formReady && !this.isSending;
     },
   },
   methods: {
-    handleError() {
+    handleError: function (response) {
       this.formReady = false;
+      if (!response) {
+        return;
+      }
+      console.log("captcha error", response);
+      setTimeout(function () {
+        this.$refs.recaptcha.reset();
+      }, 300);
     },
-    handleSuccess() {
-      this.formReady = true;
+    handleSuccess: function (response) {
+      if (!response) {
+        return (this.formReady = false);
+      }
+      return (this.formReady = true);
     },
     async sendForm() {
       this.isSending = true;
       const isFormCorrect = await this.v$.$validate();
 
       if (!isFormCorrect) {
-        console.log("validation error", this.v$.contact.$error);
         this.isSending = false;
+        this.formReady = false;
         return;
       }
 
@@ -194,6 +206,7 @@ export default {
       })
         .then(() => {
           this.isSending = false;
+          this.isFormReady = false;
           this.messageSent = true;
           this.$refs["contact-form"].reset();
         })

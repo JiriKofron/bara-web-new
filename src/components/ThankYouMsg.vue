@@ -1,13 +1,15 @@
 <template>
-  <div class="card thanks m-0 p-0">
+  <div class="card thanks">
     <div class="card-body thanks__body">
       <h3>Zpráva byla odeslána</h3>
       <hr />
       <div class="card-subtitle">
         <h4>Děkuji za vaší důvěru!</h4>
       </div>
-      <div class="card-img-top thanks__svg-animation">
-        <TheMailSendAnim />
+      <div class="card-img-top thanks__svg">
+        <div class="thanks__svg__animation">
+          <TheMailSendAnim />
+        </div>
       </div>
       <div class="card-text thanks__text">
         <p>
@@ -45,7 +47,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   background-color: white;
-  border: none;
+  border: 2px solid $contract-red;
 
   @include md {
     margin-right: 3rem;
@@ -75,9 +77,18 @@ export default {
       width: 80%;
     }
 
-    .thanks__svg-animation {
-      width: 10rem;
-      height: 10rem;
+    .thanks__svg {
+      width: 100%;
+      height: 100%;
+      background-color: $darkest-blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__animation {
+        width: 10rem;
+        height: 10rem;
+      }
     }
   }
 
@@ -90,7 +101,8 @@ export default {
   &__btn {
     width: 70%;
     max-width: 15rem;
-    padding: 1rem 2rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
     font-size: 1.2rem;
     font-weight: 700;
     font-family: $header-text;

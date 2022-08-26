@@ -1,32 +1,14 @@
 <template>
   <svg
-    id="eqyzT4dkplQ1"
+    id="e9qVKQWI64x1"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 500 500"
     shape-rendering="geometricPrecision"
     text-rendering="geometricPrecision"
   >
-    <rect
-      width="510"
-      height="510"
-      rx="0"
-      ry="0"
-      transform="translate(-5-5)"
-      fill="#457b9d"
-      stroke-width="0"
-    />
-    <rect
-      id="eqyzT4dkplQ3"
-      width="500"
-      height="500"
-      rx="0"
-      ry="0"
-      fill="#e63946"
-      stroke-width="0"
-    />
     <line
-      id="eqyzT4dkplQ4"
+      id="e9qVKQWI64x2"
       x1="-99.02956"
       y1="-70.499393"
       x2="99.029561"
@@ -38,7 +20,7 @@
       stroke-linecap="round"
     />
     <line
-      id="eqyzT4dkplQ5"
+      id="e9qVKQWI64x3"
       x1="-99.02956"
       y1="-70.499393"
       x2="99.029561"
@@ -50,7 +32,7 @@
       stroke-linecap="round"
     />
     <rect
-      id="eqyzT4dkplQ6"
+      id="e9qVKQWI64x4"
       width="382.646187"
       height="387.607892"
       rx="0"
@@ -1916,18 +1898,12 @@ export default {
     })(
       "5c7f360c",
       {
-        root: "eqyzT4dkplQ1",
+        root: "e9qVKQWI64x1",
         version: "2022-05-04",
         animations: [
           {
             elements: {
-              eqyzT4dkplQ3: {
-                opacity: [
-                  { t: 0, v: 1 },
-                  { t: 800, v: 0 },
-                ],
-              },
-              eqyzT4dkplQ4: {
+              e9qVKQWI64x2: {
                 transform: {
                   keys: {
                     o: [
@@ -1937,17 +1913,17 @@ export default {
                       },
                       {
                         t: 800,
-                        v: { x: 201.212493, y: 249.893993, type: "corner" },
+                        v: { x: 203.289086, y: 275.648132, type: "corner" },
                       },
                     ],
                     s: [
                       { t: 0, v: { x: 1.023257, y: 1 } },
-                      { t: 800, v: { x: 0.492656, y: 0.717558 } },
+                      { t: 800, v: { x: 0.354982, y: 0.542139 } },
                     ],
                   },
                 },
               },
-              eqyzT4dkplQ5: {
+              e9qVKQWI64x3: {
                 transform: {
                   data: { t: { x: -41.093693, y: -28.731675 } },
                   keys: {
@@ -1958,31 +1934,39 @@ export default {
                       },
                       {
                         t: 800,
-                        v: { x: 280.912667, y: 278.218518, type: "corner" },
+                        v: { x: 268.222888, y: 273.882965, type: "corner" },
                       },
                     ],
                     s: [
                       { t: 0, v: { x: -1.023257, y: 1 } },
-                      { t: 800, v: { x: -0.533567, y: 0.576974 } },
+                      { t: 800, v: { x: -0.469605, y: 0.891234 } },
                     ],
                   },
                 },
               },
-              eqyzT4dkplQ6: {
-                "#size": [
-                  { t: 0, v: { width: 382.646187, height: 387.607892 } },
-                  { t: 800, v: { width: 382.646187, height: 387.607892 } },
-                ],
+              e9qVKQWI64x4: {
                 "#radius": [
                   { t: 0, v: { x: 0, y: 0 } },
                   { t: 800, v: { x: 191.32, y: 191.32 } },
                 ],
+                transform: {
+                  data: {
+                    o: { x: 194.530481, y: 263.048246, type: "corner" },
+                    t: { x: -139.672611, y: -212.268854 },
+                  },
+                  keys: {
+                    s: [
+                      { t: 0, v: { x: 1.07394, y: 0.712392 } },
+                      { t: 800, v: { x: 0.9, y: 0.8 } },
+                    ],
+                  },
+                },
               },
             },
-            s: "MDDA1M2M1NmNhZWJmYmHNWYWJYYmViM0diOWIJ4NmM4NDdkN2E3YTdhRNzZINmNEYWViM2JjYOWZhZGJlYjNiOWI4NmBM4NDdiNzY2Y2IzYmVNhZmJjYWJiZWIzYjliTOGJkSzZjODRFN2I3NVjZjT2IwYjNiNmI2NmYNBODQ3Yjc2UE02Y2FUiYjZiZWFmYmNiOGFiIYmVhZjZjODRHYjBhYKmI2YmRhZjc2NmNiZGAJhRmFmYWZhZVA2YzgH0N2JjNw|",
+            s: "MPDA1M2MxNjhhYUNiYmWI4YTdRYmFKYWZiNWIL0Njg4MDc5NzZENzY3MNjcyNjhhYWFmYjhhYEmE5YmFLYWZiNVliNDKY4ODA3NzcyNjhhZmJShYWJiOGE3YmFhZmI1IYjRiOTY4ODA3NzcyNSjhLYWNhZmIyYjI2ODEgwNzc3MjY4YTdNYjJTiYVBhYmI4YjRhN2JhTVGFiNjg4MGFjYTdiMKmI5YWI3MjY4YjliNmQFiYWJhYTY4ODA3N2MNz",
           },
         ],
-        options: "MBDAxMDg4MmY4MFc4MTPZlN2Y4MTJmNDcyZjcP5N2M2ZTcxMmY4YQ|",
+        options: "MYDAxMDg4TzJmODA4MTYZlN2Y4MTJmRjQ3MmYB3OTdjUTZlNzFMMmY4CYQ|",
       },
       "__SVGATOR_PLAYER__",
       window
