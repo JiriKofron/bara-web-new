@@ -22,7 +22,7 @@ export default {
       cards: [
         {
           id: 0,
-          title: "13 let v sociálních službách",
+          title: "15 let v sociálních službách",
           icon: "fa-solid fa-people-group",
         },
         {
@@ -32,7 +32,7 @@ export default {
         },
         {
           id: 2,
-          title: "400+ sezení s klienty",
+          title: "600+ sezení s klienty",
           icon: "fa-solid fa-hand-holding-hand",
         },
       ],

@@ -44,5 +44,9 @@ p {
   font-size: 1.4rem;
   margin: 1rem auto;
   max-width: 40rem;
+
+  @include lg {
+    font-size: 1.2rem;
+  }
 }
 </style>

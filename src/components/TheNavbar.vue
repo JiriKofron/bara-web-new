@@ -93,7 +93,7 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <div class="navbar-toggler-menu">Menu</div>
     </button>
 
     <div class="navbar-nav d-none d-md-flex navbar__expanded">
@@ -112,16 +112,16 @@
       <a class="nav-link nav-item" href="#" @click="$router.push('/#about')">
         O mně
       </a>
-      <router-link to="contact" class="nav-item">
-        <button
-          class="btn btn-outline-danger"
-          type="button"
-          @click="$router.push('/contact')"
-        >
-          Kontakt
-        </button>
-      </router-link>
     </div>
+    <router-link to="contact" class="nav-item d-none d-md-flex">
+      <button
+        class="btn btn-outline-danger"
+        type="button"
+        @click="$router.push('/contact')"
+      >
+        Kontakt
+      </button>
+    </router-link>
   </nav>
 </template>
 
@@ -160,24 +160,61 @@ export default {
     }
   }
 
+  .navbar-toggler {
+    border: 1px solid $contract-red;
+
+    &-menu {
+      font-family: $header-text;
+      color: $contract-red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem 0;
+      font-size: 1.2rem;
+    }
+  }
+
   &__expanded {
     flex-direction: row;
     align-items: center;
     justify-content: end;
     width: 60%;
     margin-right: 1rem;
+    background: rgba(white, 0.9);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.8) 10%,
+      rgba(255, 255, 255, 0.8) 94%,
+      rgba(255, 255, 255, 0) 100%
+    );
+
+    @include lg {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.9) 40%,
+        rgba(255, 255, 255, 0.8) 94%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    a:hover {
+      color: $contract-red !important;
+    }
 
     .nav-link {
       margin: 0 1rem;
       font-family: $header-text;
       font-weight: 400;
       font-size: 1rem;
+      color: $darkest-blue;
     }
+  }
 
-    .btn {
-      font-family: $header-text;
-      font-size: 1.2rem;
-    }
+  .btn {
+    font-family: $header-text;
+    font-size: 1.2rem;
   }
 
   &__contact {

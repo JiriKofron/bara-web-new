@@ -10,7 +10,7 @@
           icon="fa-solid fa-mobile"
         ></font-awesome-icon>
         <div class="contact__details__detail__link">
-          <a href="#">+420 728 252 002</a>
+          <a href="#">+420 728 242 002</a>
         </div>
       </div>
       <div class="contact__details__detail">
@@ -186,6 +186,7 @@ export default {
       if (!isFormCorrect) {
         this.isSending = false;
         this.formReady = false;
+        this.$refs.recaptcha.reset();
         return;
       }
 

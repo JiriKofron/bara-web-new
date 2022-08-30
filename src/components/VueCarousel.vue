@@ -77,12 +77,20 @@ export default {
   font-size: 1.4rem;
   padding: 1rem;
 
+  @include lg {
+    font-size: 1.2rem;
+  }
+
   h2 {
     text-align: center;
     font-font: $header-text;
     font-size: 2rem;
     color: $contract-red;
     text-decoration: underline;
+
+    @include lg {
+      font-size: 1.5rem;
+    }
   }
 }
 

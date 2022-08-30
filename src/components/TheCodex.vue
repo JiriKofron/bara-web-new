@@ -1,8 +1,6 @@
 <template>
   <section id="codex">
-    <div
-      class="d-flex flex-column align-items-center justify-content-center px-5 mt-5"
-    >
+    <div class="d-flex flex-column justify-content-center px-5 mt-5">
       <p>
         Konzultace se domlouvá <strong>předem</strong>, ideálně
         <strong>e-mailem</strong>, na konkrétní hodinu dle našich vzájemných
@@ -42,6 +40,11 @@ p {
   font-family: $body-text;
   color: $darkest-blue;
   font-size: 1.4rem;
-  margin: 1rem auto;
+  margin: 1rem 0;
+  text-align: left;
+
+  @include lg {
+    font-size: 1.2rem;
+  }
 }
 </style>
