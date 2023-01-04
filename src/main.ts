@@ -19,6 +19,7 @@ import { faFileMedical } from "@fortawesome/free-solid-svg-icons";
 import { faHandHoldingHand } from "@fortawesome/free-solid-svg-icons";
 import { faMobile } from "@fortawesome/free-solid-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarker } from "@fortawesome/free-solid-svg-icons";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 /* add icons to the library */
@@ -28,7 +29,8 @@ library.add(
   faHandHoldingHand,
   faMobile,
   faAt,
-  faCircleExclamation
+  faCircleExclamation,
+  faMapMarker
 );
 
 createApp(App)

@@ -5,11 +5,11 @@
     >
       <p class="text-left">
         Pracuji nejčastěji individuálně, ale současně poskytuji i skupinové
-        supervize pro organizace. Na konzultaci mám možnost přizvat odborníky a
-        odbornice, kteří nám mohou společně pomoci rozšířit Vaše možnosti. Velmi
-        si rozumím také s mladými lidmi, kteří mohou mít podobné starosti nebo
-        přání jako dospělí. Nabízím jim prostor, kde budou vyslyšeni při svých
-        cestách, ve kterých hledají oporu.
+        konzultace. Na konzultaci mám možnost přizvat odborníky a odbornice,
+        kteří nám mohou společně pomoci rozšířit Vaše možnosti. Velmi si rozumím
+        také s mladými lidmi, kteří mohou mít podobné starosti nebo přání jako
+        dospělí. Nabízím jim prostor, kde budou vyslyšeni při svých cestách, ve
+        kterých hledají oporu.
       </p>
     </div>
     <div class="services__carousel">
@@ -38,7 +38,6 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid $contract-red;
       border-radius: 1rem;
     }
 

@@ -53,7 +53,7 @@ section {
       justify-content: center;
 
       h1 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
         color: $darkest-blue;
 
         @include lg {

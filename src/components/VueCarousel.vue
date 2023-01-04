@@ -72,10 +72,9 @@ export default {
 
 <style lang="scss" scoped>
 .carousel__container {
-  margin-top: 4rem;
   font-family: $body-text;
   font-size: 1.4rem;
-  padding: 1rem;
+  padding: 0 1rem;
 
   @include lg {
     font-size: 1.2rem;
@@ -83,18 +82,15 @@ export default {
 
   h2 {
     text-align: center;
-    font-font: $header-text;
+    font-family: $header-text;
     font-size: 2rem;
-    color: $contract-red;
-    text-decoration: underline;
+    background-color: $contract-red;
+    color: white;
+    padding: 2rem;
 
     @include lg {
       font-size: 1.5rem;
     }
   }
-}
-
-.vueperslide__title {
-  border: 1px solid $contract-red !important;
 }
 </style>

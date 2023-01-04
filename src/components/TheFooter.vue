@@ -1,17 +1,8 @@
 <template>
   <footer class="card">
-    <div class="card-body container">
-      <h3 class="card-header">Adresa</h3>
-      <hr class="mb-1" />
-      <address class="card-subtitle">
-        Bolzanova 1, Praha 1 - Nové Město,
-        <br />
-        110 00 (kanceláře Freya z.s.)
-      </address>
-      <span class="card-text">IČO: 06753493</span>
-    </div>
     <div class="copyright container-fluid">
       <a href="#" @click="$router.push('/')">www.psenicova.cz</a>
+      <span>IČO: 06753493</span>
       <span>&copy Copyright {{ year }}</span>
     </div>
   </footer>

@@ -1,5 +1,5 @@
 <template>
-  <div class="dektop">
+  <div class="desktop">
     <TheDesktopIntro />
     <section class="mt-5">
       <TherapyIntro />
@@ -20,12 +20,10 @@ import TherapyIntro from "@/components/TherapyIntro.vue";
 import WorkTiles from "@/components/WorkTiles.vue";
 import TherapyText from "@/components/TherapyText.vue";
 import TheCodex from "@/components/TheCodex.vue";
-import VueCarousel from "@/components/VueCarousel.vue";
 
 export default {
   name: "TheDesktopView",
   components: {
-    VueCarousel,
     TheDesktopIntro,
     TherapyIntro,
     WorkTiles,
