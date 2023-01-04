@@ -1,32 +1,5 @@
 <template>
   <section class="contact">
-    <div class="contact__details">
-      <div class="contact__details__detail">
-        <svg viewBox="0 0 200 150" class="contact__details__detail__circle">
-          <circle r="50" cx="100" cy="75" fill="#e63946"></circle>
-        </svg>
-        <font-awesome-icon
-          class="contact__details__detail__icon contact__details__detail__icon--phone"
-          icon="fa-solid fa-mobile"
-        ></font-awesome-icon>
-        <div class="contact__details__detail__link">
-          <a href="#">+420 728 242 002</a>
-        </div>
-      </div>
-      <div class="contact__details__detail">
-        <svg viewBox="0 0 200 150" class="contact__details__detail__circle">
-          <circle r="50" cx="100" cy="75" fill="#e63946"></circle>
-        </svg>
-        <font-awesome-icon
-          class="contact__details__detail__icon contact__details__detail__icon--email"
-          icon="fa-solid fa-at"
-        ></font-awesome-icon>
-        <div class="contact__details__detail__link">
-          <a href="mailto:b.psenicova@gmail.com">b.psenicova@gmail.com</a>
-        </div>
-      </div>
-    </div>
-
     <ThankYouMsg v-if="messageSent" />
 
     <form v-else class="contact-form" ref="contact-form">
@@ -112,6 +85,50 @@
         </button>
       </div>
     </form>
+
+    <div class="contact__details">
+      <div class="contact__details__detail">
+        <svg viewBox="0 0 200 150" class="contact__details__detail__circle">
+          <circle r="50" cx="100" cy="75" fill="#e63946"></circle>
+        </svg>
+        <font-awesome-icon
+          class="contact__details__detail__icon contact__details__detail__icon--phone"
+          icon="fa-solid fa-mobile"
+        ></font-awesome-icon>
+        <div class="contact__details__detail__link">
+          <a href="#">+420 728 242 002</a>
+        </div>
+      </div>
+      <div class="contact__details__detail">
+        <svg viewBox="0 0 200 150" class="contact__details__detail__circle">
+          <circle r="50" cx="100" cy="75" fill="#e63946"></circle>
+        </svg>
+        <font-awesome-icon
+          class="contact__details__detail__icon contact__details__detail__icon--email"
+          icon="fa-solid fa-at"
+        ></font-awesome-icon>
+        <div class="contact__details__detail__link">
+          <a href="mailto:b.psenicova@gmail.com">b.psenicova@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="contact__details__detail">
+        <svg viewBox="0 0 200 150" class="contact__details__detail__circle">
+          <circle r="50" cx="100" cy="75" fill="#e63946"></circle>
+        </svg>
+        <font-awesome-icon
+          class="contact__details__detail__icon contact__details__detail__icon--address"
+          icon="fa-solid fa-map-marker"
+        ></font-awesome-icon>
+        <div class="contact__details__detail__address">
+          <address>
+            kanceláře Freya z.s., 2. patro
+            <br />
+            Bolzanova 1, Praha 1 - Nové Město, 110 00
+          </address>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -234,6 +251,10 @@ export default {
     justify-content: space-between;
   }
 
+  @include lg {
+    align-items: flex-start;
+  }
+
   &__details {
     margin-top: 1rem;
     display: flex;
@@ -273,6 +294,15 @@ export default {
             left: calc(50% - 90px / 2);
           }
         }
+
+        &--address {
+          top: 5rem;
+          left: calc(50% - 55px / 2);
+
+          @include lg {
+            left: calc(50% - 70px / 2);
+          }
+        }
       }
 
       &__link {
@@ -287,6 +317,13 @@ export default {
           color: $contract-red;
           text-decoration: none;
         }
+      }
+
+      address {
+        font-size: 1.2rem;
+        font-family: $header-text;
+        color: $contract-red;
+        text-decoration: none;
       }
     }
   }
@@ -304,7 +341,7 @@ export default {
   z-index: 1;
 
   @include md {
-    margin-right: 3rem;
+    margin-left: 3rem;
   }
 
   &__error-msg {
