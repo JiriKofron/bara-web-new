@@ -1,0 +1,40 @@
+{
+  "video": {
+    "data": [
+      {
+        "id": 0,
+        "title": "Rozhovory o psychoterapii",
+        "data": {
+          "title": "Rozhovory o psychoterapii",
+          "src": "https://www.youtube.com/embed/XzL05rLSOgo"
+        }
+      },
+      {
+        "id": 1,
+        "title": "Současná situace očima psychoterapeuta",
+        "data": {
+          "title": "Současná situace očima psychoterapeuta",
+          "src": "https://www.facebook.com/plugins/video.php?height=303&href=https%3A%2F%2Fwww.facebook.com%2Fmyterap.io%2Fvideos%2F1552767414880768%2F&show_text=false&width=560&t=0",
+          "style": "border: none; overflow: hidden"
+        }
+      },
+      {
+        "id": 2,
+        "title":"Přestaňme opakovat, že mladá generace je slabá (DVTV placenné)" ,
+        "data": {
+          "title": "Přestaňme opakovat, že mladá generace je slabá" ,
+          "src": "https://www.dvtv.cz/player/krYJ4sWLgHwLQhIgy0cX?type=VIDEO",
+          "style": ""
+        }
+      }
+    ],
+    "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  },
+  "audio": [
+
+  ],
+  "text": [
+
+  ]
+
+}
