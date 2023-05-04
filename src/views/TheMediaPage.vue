@@ -66,8 +66,6 @@ export default {
   setup() {
     const videoData = media.video;
 
-    console.log(videoData);
-
     return { videoData };
   },
 };
