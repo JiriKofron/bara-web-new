@@ -54,7 +54,7 @@ export default {
         },
         {
           id: 7,
-          text: "potýkají se nějakým druhem násilí",
+          text: "potýkají se s nějakým druhem násilí",
         },
         {
           id: 8,
@@ -62,7 +62,7 @@ export default {
         },
         {
           id: 9,
-          text: "řeší svou identitu, zabývají se tématy LGBTQ",
+          text: "řeší svou identitu, zabývají se queer tématy",
         },
       ],
     };

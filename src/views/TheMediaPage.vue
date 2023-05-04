@@ -2,30 +2,17 @@
   <section class="media">
     <article class="media__video">
       <h2>Video</h2>
-      <div class="card">
+      <div v-for="video in videoData.data" :key="video.id" class="card">
         <div class="card-body">
-          <h3 class="card-title">Rozhovory o psychoterapii</h3>
+          <h3 class="card-title">{{ video.title }}</h3>
           <iframe
             width="100%"
             height="auto"
-            src="https://www.youtube.com/embed/XzL05rLSOgo"
-            title="Rozhovory o psychoterapii"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            :src="video.data.src"
+            :title="video.data.title"
+            :style="video.style"
+            :allow="videoData.allow"
             allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-body">
-          <h3 class="card-title">Současná situace očima psychoterapeuta</h3>
-          <iframe
-            width="100%"
-            height="auto"
-            src="https://www.facebook.com/plugins/video.php?height=303&href=https%3A%2F%2Fwww.facebook.com%2Fmyterap.io%2Fvideos%2F1552767414880768%2F&show_text=false&width=560&t=0"
-            style="border: none; overflow: hidden"
-            allowfullscreen
-            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
           ></iframe>
         </div>
       </div>
@@ -73,8 +60,16 @@
 </template>
 
 <script>
+import media from "@/media.json";
 export default {
   name: "TheMediaPage",
+  setup() {
+    const videoData = media.video;
+
+    console.log(videoData);
+
+    return { videoData };
+  },
 };
 </script>
 
