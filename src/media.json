@@ -26,9 +26,19 @@
           "src": "https://www.youtube.com/embed/xZAgw6WkVr4",
           "style": ""
         }
+      },
+      {
+        "id": 3,
+        "title": "Děti tráví online víc času, než samy chtějí.",
+        "data" : {
+          "title": "Děti tráví online víc času, než samy chtějí.",
+          "src": "https://video.aktualne.cz/embed_iframe/spotlight/spotlight-rozhovor-barbora-psenicova-video/r~48e62088110911eeb1f50cc47ab5f122/?media_external=1",
+          "style": "border: none; overflow: hidden"
+        }
       }
+
     ],
-    "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    "allow": "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   },
   "audio": [
 

@@ -124,7 +124,7 @@ section {
   @include sm {
     .media__video {
       iframe {
-        height: 15rem;
+        height: 19rem;
       }
     }
   }
