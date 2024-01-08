@@ -4,7 +4,7 @@
       class="d-flex flex-column align-items-center justify-content-center px-5 mt-5 intro__text"
     >
       <p class="text-left">
-        Na terapii můžete přijít s různými potížemi, se kterými si nevíte rady a
+        Na terapii můžete přijít s různými obtížemi, se kterými si nevíte rady a
         v situacích, kdy potřebujete podpořit. Můj terapeutický přístup je velmi
         individuální a záleží i na vás samotných, jak budeme postupovat.
         Důležité je, abyste přicházeli s vlastní potřebou změny. Nenabízím návod
