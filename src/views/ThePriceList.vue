@@ -4,7 +4,7 @@
     <div class="list-group">
       <div class="list-group-item p-3">
         <h3>Individuální konzultace</h3>
-        <p>900 Kč / 50 minut</p>
+        <p>1000 Kč / 50 minut</p>
       </div>
       <div class="list-group-item p-3">
         <h3>Skupinová konzultace</h3>

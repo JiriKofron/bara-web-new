@@ -27,12 +27,12 @@ export default {
         },
         {
           id: 1,
-          title: "3 roky terapeutické praxe",
+          title: "4 roky terapeutické praxe",
           icon: "fa-solid fa-file-medical",
         },
         {
           id: 2,
-          title: "600+ sezení s klienty",
+          title: "1000+ sezení s klienty",
           icon: "fa-solid fa-hand-holding-hand",
         },
       ],
