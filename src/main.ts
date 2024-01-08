@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import VueGtag from "vue-gtag-next";
-// @ts-ignore
 import router from "./router/index.js";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -36,10 +35,13 @@ library.add(
 createApp(App)
   .component("font-awesome-icon", FontAwesomeIcon)
   .use(router)
-  .use(VueGtag, {
-    property: {
-      id: "UA-148345268-1",
+  .use(
+    VueGtag as never,
+    {
+      property: {
+        id: "UA-148345268-1",
+      },
     },
-    router,
-  })
+    router
+  )
   .mount("#app");
