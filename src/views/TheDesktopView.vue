@@ -14,23 +14,12 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import TheDesktopIntro from "@/components/TheDesktopIntro.vue";
 import TherapyIntro from "@/components/TherapyIntro.vue";
 import WorkTiles from "@/components/WorkTiles.vue";
 import TherapyText from "@/components/TherapyText.vue";
 import TheCodex from "@/components/TheCodex.vue";
-
-export default {
-  name: "TheDesktopView",
-  components: {
-    TheDesktopIntro,
-    TherapyIntro,
-    WorkTiles,
-    TherapyText,
-    TheCodex,
-  },
-};
 </script>
 
 <style lang="scss" scoped>
