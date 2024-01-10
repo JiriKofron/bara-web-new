@@ -173,7 +173,7 @@ const rules = {
 
 const v$ = useVuelidate(rules, contact);
 
-const handleError = (response: any) => {
+const handleError = (response: never) => {
   formReady.value = false;
 
   if (!response) {
@@ -186,7 +186,7 @@ const handleError = (response: any) => {
   }, 300);
 };
 
-const handleSuccess = (response: any) => {
+const handleSuccess = (response: never) => {
   if (!response) {
     return (formReady.value = false);
   }

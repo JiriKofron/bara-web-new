@@ -10,7 +10,7 @@
             height="auto"
             :src="video.data.src"
             :title="video.data.title"
-            :style="video.style"
+            :style="video.data.style"
             :allow="media.video.allow"
             allowfullscreen
           ></iframe>
