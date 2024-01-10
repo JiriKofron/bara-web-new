@@ -18,12 +18,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "TheIntro",
-};
-</script>
-
 <style lang="scss" scoped>
 section {
   height: 100%;

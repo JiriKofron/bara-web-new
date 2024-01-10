@@ -18,12 +18,8 @@
   </section>
 </template>
 
-<script>
+<script setup lang="ts">
 import VueCarousel from "@/components/VueCarousel.vue";
-export default {
-  name: "TherapyText",
-  components: { VueCarousel },
-};
 </script>
 
 <style lang="scss" scoped>

@@ -18,12 +18,8 @@
   </section>
 </template>
 
-<script>
+<script setup lang="ts">
 import ContactButton from "@/components/ContactButton.vue";
-export default {
-  name: "TheDesktopIntro",
-  components: { ContactButton },
-};
 </script>
 
 <style lang="scss" scoped>

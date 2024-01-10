@@ -28,13 +28,8 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import TheMailSendAnim from "@/components/icons/TheMailSendAnim.vue";
-
-export default {
-  name: "ThankYouMsg",
-  components: { TheMailSendAnim },
-};
 </script>
 
 <style lang="scss" scoped>

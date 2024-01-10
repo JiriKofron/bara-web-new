@@ -34,35 +34,27 @@ onUnmounted(() => {
       </p>
       <p>
         Velmi dobře si rozumím s projektovým řízením a lektoruji v oblastech
-        spjatých se sociálními službami. Věnovala jsem se i výzkumné činnosti,
-        například v tématu násilí v sexbyznysu. Vycházím hodně ze systemické
-        terapie a konstruktivistických teorií.
+        spjatých s lidskými právy. Věnuji se i výzkumné a evaluační činnosti,
+        spolupracovala jsem výzkumně na tématech dětského duševní zdraví v České
+        republice, dopady práce se sexualitou v zařízeních sociálních služeb
+        nebo na tématu násilí v sexbyznysu.
       </p>
       <p>
-        Procházím výcvikem Terapie v postmoderně pod odborným vedením MUDr. Olgy
-        Kunertové. Díky tomu mě oslovují různé druhy práce, jako například
-        narativní, krátká terapie orientovaná na řešení nebo zakázkový přístup.
+        Absolvovala jsem pětiletý výcvik Terapie v postmoderně pod odborným
+        vedením MUDr. Olgy Kunertové. Díky tomu mě oslovují různé druhy práce,
+        jako například narativní, krátká terapie orientovaná na řešení nebo
+        zakázkový přístup. Mám základy krizové intervence, komplexní výcvik v
+        mediaci a kariérovém poradenství. Absolvovala jsem mnoho různých dílčích
+        školení, například Úvod do práce s traumatizovanou osobou nebo Kids
+        Skills zaměřené na řešení problémů při práci s dětmi, jejich rodiči a
+        celou komunitou. Jsem pod supervizí.
       </p>
       <p>
-        Vycházím z postmoderních psychoterapeutických škol a pracuji s teoriemi
-        předních psychoterapeutických osobností, jako jsou Insoo Kim Berg, Kurt
-        Ludewig nebo Harlene Anderson. Mou velkou inspirací je práce terapeutky
-        Sabine Vermeire nebo Michaela Whita.
+        Vycházím hodně ze systemické terapie a konstruktivistických teorií.
+        Inspirují mě psychoterapeutické školy a osobnosti jako jsou Insoo Kim
+        Berg, Erik Erikson, Kurt Ludewig, Harlene Anderson nebo Michael White.
+        Ze současných terapeutů a terapeutek si vážím práce Sabine Vermeire.
       </p>
-    </article>
-
-    <article class="more-about__education">
-      <h3>Specializované kurzy a workshopy</h3>
-
-      <ul>
-        <li>Komplexní výcvik v mediaci</li>
-        <li>Kurz kariérového poradenství</li>
-        <li>Práce s traumatizovanou osobou</li>
-        <li>Pracovník v sociálních službách</li>
-        <li>Narativní práce v terapii</li>
-        <li>Motivační rozhovory</li>
-        <li>Individuální plánování</li>
-      </ul>
     </article>
   </section>
 </template>
@@ -112,31 +104,6 @@ onUnmounted(() => {
 
       @include lg {
         font-size: 1.2rem;
-      }
-    }
-  }
-
-  &__education {
-    padding: 1.5rem;
-
-    h3 {
-      font-family: $header-text;
-      font-size: 2rem;
-      color: $darkest-blue;
-      padding: 0.5rem 0;
-    }
-
-    ul {
-      margin-top: 1rem;
-      display: flex;
-      flex-flow: column nowrap;
-      gap: 0.5rem;
-      list-style: none;
-
-      li {
-        font-family: $body-text;
-        font-size: 1.2rem;
-        color: $darkest-blue;
       }
     }
   }

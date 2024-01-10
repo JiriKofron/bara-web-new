@@ -10,12 +10,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "ContactButton",
-};
-</script>
-
 <style lang="scss" scoped>
 .contact__btn {
   font-family: $header-text;

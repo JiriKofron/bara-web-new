@@ -125,12 +125,6 @@
   </nav>
 </template>
 
-<script>
-export default {
-  name: "TheNavbar",
-};
-</script>
-
 <style scoped lang="scss">
 .navbar {
   max-width: 1600px;

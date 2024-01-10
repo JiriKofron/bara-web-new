@@ -2,7 +2,7 @@
   <section class="contact">
     <ThankYouMsg v-if="messageSent" />
 
-    <form v-else class="contact-form" ref="contact-form">
+    <form v-else class="contact-form" ref="contactForm">
       <div class="p-0 m-0">
         <label for="name" class="form-label">Jméno:</label>
         <input
@@ -11,7 +11,7 @@
           class="form-control"
           v-model="contact.name"
         />
-        <div v-if="v$.contact.name.$error" class="contact-form__error-msg">
+        <div v-if="v$.name.$errors.length" class="contact-form__error-msg">
           <font-awesome-icon
             icon="fa-solid fa-circle-exclamation"
             size="lg"
@@ -27,13 +27,13 @@
           class="form-control"
           v-model="contact.email"
         />
-        <div v-if="v$.contact.email.$error" class="contact-form__error-msg">
+        <div v-if="v$.email.$errors.length" class="contact-form__error-msg">
           <font-awesome-icon
             icon="fa-solid fa-circle-exclamation"
             size="lg"
             class="pe-2"
           />
-          Zadejte svůj email
+          Zadejte svůj platný email
         </div>
 
         <label for="mobile" class="form-label">Telefon: (nepovinné)</label>
@@ -51,7 +51,7 @@
           rows="5"
           v-model="contact.text"
         />
-        <div v-if="v$.contact.text.$error" class="contact-form__error-msg">
+        <div v-if="v$.text.$errors.length" class="contact-form__error-msg">
           <font-awesome-icon
             icon="fa-solid fa-circle-exclamation"
             size="lg"
@@ -63,7 +63,7 @@
         <VueRecaptcha
           class="contact-form__recaptcha"
           ref="recaptcha"
-          :sitekey="getKey"
+          :sitekey="captcha"
           :load-recaptcha-script="true"
           @verify="handleSuccess"
           @error="handleError"
@@ -132,108 +132,103 @@
   </section>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref, computed } from "vue";
+import type { Ref } from "vue";
 import axios from "axios";
 import { VueRecaptcha } from "vue-recaptcha";
-import useValidate from "@vuelidate/core";
-import { required } from "@vuelidate/validators";
+import { useVuelidate } from "@vuelidate/core";
+import { required, email } from "@vuelidate/validators";
 import ThankYouMsg from "@/components/ThankYouMsg.vue";
 
-export default {
-  name: "ContactPage",
-  components: { ThankYouMsg, VueRecaptcha },
-  data() {
-    return {
-      contact: {
-        name: "",
-        email: "",
-        mobile: "",
-        text: "",
+interface Contact {
+  name: string;
+  email: string;
+  mobile: string;
+  text: string;
+}
+
+const contact: Ref<Contact> = ref({
+  name: "",
+  email: "",
+  mobile: "",
+  text: "",
+});
+
+const isSending = ref(false);
+const messageSent = ref(false);
+const formReady = ref(false);
+const captcha = "6LcgwZwhAAAAAEUE78LrBlcRk2TMTYhLVThG-xao";
+
+const recaptcha = ref();
+const contactForm = ref();
+
+const isFormReady = computed(() => formReady.value && !isSending.value);
+
+const rules = {
+  name: { required },
+  text: { required },
+  email: { required, email },
+};
+
+const v$ = useVuelidate(rules, contact);
+
+const handleError = (response: any) => {
+  formReady.value = false;
+
+  if (!response) {
+    return;
+  }
+
+  console.log("captcha error", response);
+  setTimeout(function () {
+    recaptcha.value.reset();
+  }, 300);
+};
+
+const handleSuccess = (response: any) => {
+  if (!response) {
+    return (formReady.value = false);
+  }
+  return (formReady.value = true);
+};
+
+const sendForm = async () => {
+  isSending.value = true;
+  const isFormCorrect = await v$.value.$validate();
+
+  if (!isFormCorrect) {
+    isSending.value = false;
+    formReady.value = false;
+    recaptcha.value.reset();
+    return;
+  }
+
+  let body = JSON.stringify({
+    name: contact.value?.name,
+    email: contact.value?.email,
+    mobile: contact.value?.mobile,
+    message: contact.value?.text,
+  });
+
+  try {
+    axios({
+      method: "POST",
+      url: "https://qve84d0ly2.execute-api.eu-central-1.amazonaws.com/{proxy+}",
+      data: body,
+      headers: {
+        "Content-Type": "application/json",
       },
-      isSending: false,
-      messageSent: false,
-      formReady: false,
-      // captcha: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
-      captcha: "6LcgwZwhAAAAAEUE78LrBlcRk2TMTYhLVThG-xao",
-    };
-  },
-  setup() {
-    return {
-      v$: useValidate(),
-    };
-  },
-  validations() {
-    return {
-      contact: {
-        name: { required },
-        email: { required },
-        text: { required },
-      },
-    };
-  },
-  computed: {
-    getKey() {
-      return this.captcha;
-    },
-    isFormReady() {
-      return this.formReady && !this.isSending;
-    },
-  },
-  methods: {
-    handleError: function (response) {
-      this.formReady = false;
-      if (!response) {
-        return;
-      }
-      console.log("captcha error", response);
-      setTimeout(function () {
-        this.$refs.recaptcha.reset();
-      }, 300);
-    },
-    handleSuccess: function (response) {
-      if (!response) {
-        return (this.formReady = false);
-      }
-      return (this.formReady = true);
-    },
-    async sendForm() {
-      this.isSending = true;
-      const isFormCorrect = await this.v$.$validate();
+    });
 
-      if (!isFormCorrect) {
-        this.isSending = false;
-        this.formReady = false;
-        this.$refs.recaptcha.reset();
-        return;
-      }
-
-      let body = JSON.stringify({
-        name: this.contact.name,
-        email: this.contact.email,
-        mobile: this.contact.mobile,
-        message: this.contact.text,
-      });
-
-      axios({
-        method: "POST",
-        url: "https://qve84d0ly2.execute-api.eu-central-1.amazonaws.com/{proxy+}",
-        data: body,
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then(() => {
-          this.isSending = false;
-          this.isFormReady = false;
-          this.messageSent = true;
-          this.$refs["contact-form"].reset();
-        })
-        .catch((err) => {
-          console.log("form error", err);
-          this.isSending = false;
-        });
-    },
-  },
+    formReady.value = false;
+    messageSent.value = true;
+    contactForm.value.reset();
+  } catch (error) {
+    console.log("form error", error);
+  } finally {
+    isSending.value = false;
+  }
 };
 </script>
 
