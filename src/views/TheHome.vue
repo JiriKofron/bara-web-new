@@ -1,37 +1,15 @@
 <template>
-  <TheMobileView v-if="mobile" />
+  <TheMobileView v-if="width < 780" />
   <TheDesktopView v-else />
 </template>
 
-<script>
+<script setup lang="ts">
+import { useWindowSize } from "@vueuse/core";
+
 import TheMobileView from "./TheMobileView.vue";
 import TheDesktopView from "./TheDesktopView.vue";
-export default {
-  name: "TheHome",
-  components: { TheDesktopView, TheMobileView },
-  data() {
-    return {
-      mobile: false,
-      width: window.innerWidth,
-    };
-  },
-  computed: {
-    getWindowWidth() {
-      return this.width;
-    },
-  },
-  created() {
-    this.setLayout();
-  },
-  methods: {
-    setLayout() {
-      if (this.getWindowWidth < 780) {
-        return (this.mobile = true);
-      }
-      return (this.mobile = false);
-    },
-  },
-};
+
+const { width } = useWindowSize();
 </script>
 
 <style scoped></style>

@@ -22,12 +22,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "ThePriceList",
-};
-</script>
-
 <style lang="scss" scoped>
 section {
   max-width: 40rem;

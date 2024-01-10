@@ -106,6 +106,7 @@ section {
       font-family: $header-text;
       font-size: 1.5rem;
       color: $darkest-blue;
+      padding: 0.5rem 0;
     }
 
     a {

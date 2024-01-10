@@ -19,21 +19,26 @@
       </p>
     </div>
     <div class="d-flex align-items-center justify-content-center">
-      <MoreInfoBtn />
+      <MoreInfoBtn v-model="showMoreInfo" />
     </div>
+
+    <MoreInfoModal v-if="showMoreInfo" v-model="showMoreInfo" />
   </section>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref } from "vue";
 import MoreInfoBtn from "@/components/MoreInfoBtn.vue";
+import MoreInfoModal from "@/components/MoreInfoModal.vue";
 
-export default {
-  name: "TherapyIntro",
-  components: { MoreInfoBtn },
-};
+const showMoreInfo = ref(false);
 </script>
 
 <style lang="scss" scoped>
+#about {
+  position: relative;
+}
+
 .intro__text {
   display: flex;
 }
