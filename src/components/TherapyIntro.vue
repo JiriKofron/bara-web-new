@@ -31,7 +31,7 @@ import { ref } from "vue";
 import MoreInfoBtn from "@/components/MoreInfoBtn.vue";
 import MoreInfoModal from "@/components/MoreInfoModal.vue";
 
-const showMoreInfo = ref(true);
+const showMoreInfo = ref(false);
 </script>
 
 <style lang="scss" scoped>
