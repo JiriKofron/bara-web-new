@@ -93,7 +93,7 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <div class="navbar-toggler-menu">Menu</div>
+      <span class="navbar-toggler-menu">Menu</span>
     </button>
 
     <div class="navbar-nav d-none d-md-flex navbar__expanded">
