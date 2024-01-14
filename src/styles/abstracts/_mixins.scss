@@ -30,7 +30,7 @@ $xlarge-min: 1280px;
 }
 
 @mixin xl {
-    @media (min-width: #{$large-min}) {
+    @media (min-width: #{$xlarge-min}) {
         @content;
     }
 }

@@ -1,6 +1,6 @@
 <template>
   <section style="margin-top: 7rem">
-    <h2>Ceník pro rok 2023</h2>
+    <h2>Ceník pro rok {{ new Date().getFullYear() }}</h2>
     <div class="list-group">
       <div class="list-group-item p-3">
         <h3>Individuální konzultace</h3>

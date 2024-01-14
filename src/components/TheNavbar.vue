@@ -1,3 +1,19 @@
+<script setup>
+import { useWindowScroll } from "@vueuse/core";
+import { ref, watch } from "vue";
+
+const { y } = useWindowScroll();
+const navbar = ref();
+
+watch(y, (scrollY) => {
+  if (scrollY > 40) {
+    navbar.value.style.backgroundColor = "rgba(255 255 255 / .9)";
+  } else {
+    navbar.value.style.backgroundColor = "transparent";
+  }
+});
+</script>
+
 <template>
   <div class="collapse navbar-collapse navbar__ham" id="navbarToggle">
     <div class="navbar-nav me-auto navbar__ham__links">
@@ -76,7 +92,7 @@
       </button>
     </div>
   </div>
-  <nav class="navbar fixed-top navbar-light flex-nowrap mx-4">
+  <nav class="navbar fixed-top navbar-light flex-nowrap mx-4" ref="navbar">
     <a
       class="navbar-brand px-3 pt-2 text-wrap"
       href="#"
@@ -174,24 +190,6 @@
     justify-content: end;
     width: 60%;
     margin-right: 1rem;
-    background: rgba(white, 0.9);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.8) 10%,
-      rgba(255, 255, 255, 0.8) 94%,
-      rgba(255, 255, 255, 0) 100%
-    );
-
-    @include lg {
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 20%,
-        rgba(255, 255, 255, 0.9) 40%,
-        rgba(255, 255, 255, 0.8) 94%,
-        rgba(255, 255, 255, 0) 100%
-      );
-    }
 
     a:hover {
       color: $contract-red !important;
