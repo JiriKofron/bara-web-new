@@ -1,6 +1,10 @@
 <template>
   <section>
-    <img class="hero__img" src="/D3P_portrety_2021_web-17.webp" />
+    <img
+      class="hero__img"
+      src="/D3P_portrety_2021_web-17.webp"
+      alt="Barbora Pšenicová"
+    />
 
     <div class="hero">
       <div class="hero__headline">
@@ -18,12 +22,8 @@
   </section>
 </template>
 
-<script>
+<script setup lang="ts">
 import ContactButton from "@/components/ContactButton.vue";
-export default {
-  name: "TheDesktopIntro",
-  components: { ContactButton },
-};
 </script>
 
 <style lang="scss" scoped>
@@ -40,6 +40,7 @@ section {
     flex-direction: column;
     justify-content: center;
     margin-left: 5rem;
+    margin-right: 2rem;
 
     &__img {
       transform: scale(1.2);
@@ -56,7 +57,7 @@ section {
         font-size: 2.4rem;
         color: $darkest-blue;
 
-        @include lg {
+        @include xl {
           font-size: 4rem;
         }
       }

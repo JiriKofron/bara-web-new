@@ -2,7 +2,7 @@
   <section class="media">
     <article class="media__video">
       <h2>Video</h2>
-      <div v-for="video in videoData.data" :key="video.id" class="card">
+      <div v-for="video in media.video.data" :key="video.id" class="card">
         <div class="card-body">
           <h3 class="card-title">{{ video.title }}</h3>
           <iframe
@@ -10,8 +10,8 @@
             height="auto"
             :src="video.data.src"
             :title="video.data.title"
-            :style="video.style"
-            :allow="videoData.allow"
+            :style="video.data.style"
+            :allow="media.video.allow"
             allowfullscreen
           ></iframe>
         </div>
@@ -59,16 +59,8 @@
   </section>
 </template>
 
-<script>
+<script setup lang="ts">
 import media from "@/media.json";
-export default {
-  name: "TheMediaPage",
-  setup() {
-    const videoData = media.video;
-
-    return { videoData };
-  },
-};
 </script>
 
 <style lang="scss" scoped>

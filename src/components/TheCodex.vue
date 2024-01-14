@@ -29,12 +29,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  name: "TheCodex",
-};
-</script>
-
 <style lang="scss" scoped>
 p {
   font-family: $body-text;

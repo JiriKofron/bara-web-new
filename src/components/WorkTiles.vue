@@ -14,31 +14,30 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "WorkTiles",
-  data() {
-    return {
-      cards: [
-        {
-          id: 0,
-          title: "15 let v sociálních službách",
-          icon: "fa-solid fa-people-group",
-        },
-        {
-          id: 1,
-          title: "4 roky terapeutické praxe",
-          icon: "fa-solid fa-file-medical",
-        },
-        {
-          id: 2,
-          title: "1000+ sezení s klienty",
-          icon: "fa-solid fa-hand-holding-hand",
-        },
-      ],
-    };
-  },
+<script setup lang="ts">
+type Card = {
+  id: number;
+  title: string;
+  icon: string;
 };
+
+const cards: Card[] = [
+  {
+    id: 0,
+    title: "15 let v sociálních službách",
+    icon: "fa-solid fa-people-group",
+  },
+  {
+    id: 1,
+    title: "4 roky terapeutické praxe",
+    icon: "fa-solid fa-file-medical",
+  },
+  {
+    id: 2,
+    title: "1000+ sezení s klienty",
+    icon: "fa-solid fa-hand-holding-hand",
+  },
+];
 </script>
 
 <style lang="scss" scoped>

@@ -10,12 +10,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "ContactButton",
-};
-</script>
-
 <style lang="scss" scoped>
 .contact__btn {
   font-family: $header-text;
@@ -24,6 +18,11 @@ export default {
   width: 90%;
   max-width: 30rem;
   margin: 1rem auto;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   @include md {
     font-size: 1.4rem;

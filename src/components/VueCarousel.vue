@@ -14,60 +14,57 @@
   </section>
 </template>
 
-<script>
+<script setup lang="ts">
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 
-export default {
-  name: "VueCarousel",
-  components: { VueperSlide, VueperSlides },
-  data() {
-    return {
-      slides: [
-        {
-          id: 0,
-          text: "mají ve svém životě něco, co tam nechtějí",
-        },
-        {
-          id: 1,
-          text: "mají obtíže, které jim ztrpčují život",
-        },
-        {
-          id: 2,
-          text: "mají vztahové nebo rodinné obtíže",
-        },
-        {
-          id: 3,
-          text: "zabývají se směřováním, únavou, rozhodnutím v pracovním životě",
-        },
-        {
-          id: 4,
-          text: "řeší nebo se připravují na velké změny",
-        },
-        {
-          id: 5,
-          text: "jsou trochu nesví, nemají radost a taky třeba vůbec neví, co to znamená",
-        },
-        {
-          id: 6,
-          text: "bojují se závislosti",
-        },
-        {
-          id: 7,
-          text: "potýkají se s nějakým druhem násilí",
-        },
-        {
-          id: 8,
-          text: "zažívají pocit ztráty",
-        },
-        {
-          id: 9,
-          text: "řeší svou identitu, zabývají se queer tématy",
-        },
-      ],
-    };
-  },
+type Slides = {
+  id: number;
+  text: string;
 };
+
+const slides: Slides[] = [
+  {
+    id: 0,
+    text: "mají ve svém životě něco, co tam nechtějí",
+  },
+  {
+    id: 1,
+    text: "mají obtíže, které jim ztrpčují život",
+  },
+  {
+    id: 2,
+    text: "mají vztahové nebo rodinné obtíže",
+  },
+  {
+    id: 3,
+    text: "zabývají se směřováním, únavou, rozhodnutím v pracovním životě",
+  },
+  {
+    id: 4,
+    text: "řeší nebo se připravují na velké změny",
+  },
+  {
+    id: 5,
+    text: "jsou trochu nesví, nemají radost a taky třeba vůbec neví, co to znamená",
+  },
+  {
+    id: 6,
+    text: "bojují se závislosti",
+  },
+  {
+    id: 7,
+    text: "potýkají se s nějakým druhem násilí",
+  },
+  {
+    id: 8,
+    text: "zažívají pocit ztráty",
+  },
+  {
+    id: 9,
+    text: "řeší svou identitu, zabývají se queer tématy",
+  },
+];
 </script>
 
 <style lang="scss" scoped>
