@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import TheMailSendAnim from "@/components/icons/TheMailSendAnim.vue";
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+</script>
+
 <template>
   <div class="card thanks">
     <div class="card-body thanks__body">
@@ -20,17 +28,13 @@
       <button
         type="button"
         class="btn btn-outline-info thanks__btn"
-        @click="$router.push('/')"
+        @click="router.push('/')"
       >
         Zpět na úvod
       </button>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import TheMailSendAnim from "@/components/icons/TheMailSendAnim.vue";
-</script>
 
 <style lang="scss" scoped>
 .thanks {

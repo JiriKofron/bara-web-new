@@ -47,7 +47,7 @@ onUnmounted(() => {
         mediaci a kariérovém poradenství. Absolvovala jsem mnoho různých dílčích
         školení, například Úvod do práce s traumatizovanou osobou nebo Kids
         Skills zaměřené na řešení problémů při práci s dětmi, jejich rodiči a
-        celou komunitou. Jsem pod supervizí.
+        celou komunitou. Jsem pod supervizí a řádnou členkou České asociace pro psychoterapii.
       </p>
       <p>
         Vycházím hodně ze systemické terapie a konstruktivistických teorií.

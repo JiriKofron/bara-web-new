@@ -12,10 +12,8 @@
           v-model="contact.name"
         />
         <div v-if="v$.name.$errors.length" class="contact-form__error-msg">
-          <font-awesome-icon
-            icon="fa-solid fa-circle-exclamation"
-            size="lg"
-            class="pe-2"
+          <i
+            class="pe-2 fa-solid fa-circle-exclamation"
           />
           Zadejte své jméno
         </div>
@@ -28,10 +26,8 @@
           v-model="contact.email"
         />
         <div v-if="v$.email.$errors.length" class="contact-form__error-msg">
-          <font-awesome-icon
-            icon="fa-solid fa-circle-exclamation"
-            size="lg"
-            class="pe-2"
+          <i
+            class="pe-2 fa-solid fa-circle-exclamation"
           />
           Zadejte svůj platný email
         </div>
@@ -91,10 +87,9 @@
         <svg viewBox="0 0 200 150" class="contact__details__detail__circle">
           <circle r="50" cx="100" cy="75" fill="#e63946"></circle>
         </svg>
-        <font-awesome-icon
-          class="contact__details__detail__icon contact__details__detail__icon--phone"
-          icon="fa-solid fa-mobile"
-        ></font-awesome-icon>
+        <i
+          class="fa-solid fa-mobile contact__details__detail__icon contact__details__detail__icon--phone"
+        ></i>
         <div class="contact__details__detail__link">
           <a href="#">+420 728 242 002</a>
         </div>
@@ -103,10 +98,9 @@
         <svg viewBox="0 0 200 150" class="contact__details__detail__circle">
           <circle r="50" cx="100" cy="75" fill="#e63946"></circle>
         </svg>
-        <font-awesome-icon
-          class="contact__details__detail__icon contact__details__detail__icon--email"
-          icon="fa-solid fa-at"
-        ></font-awesome-icon>
+        <i
+          class="fa-solid fa-at contact__details__detail__icon contact__details__detail__icon--email"
+        ></i>
         <div class="contact__details__detail__link">
           <a href="mailto:b.psenicova@gmail.com">b.psenicova@gmail.com</a>
         </div>
@@ -116,15 +110,12 @@
         <svg viewBox="0 0 200 150" class="contact__details__detail__circle">
           <circle r="50" cx="100" cy="75" fill="#e63946"></circle>
         </svg>
-        <font-awesome-icon
-          class="contact__details__detail__icon contact__details__detail__icon--address"
-          icon="fa-solid fa-map-marker"
-        ></font-awesome-icon>
+        <i
+          class="fa-solid fa-map-marker contact__details__detail__icon contact__details__detail__icon--address"
+        ></i>
         <div class="contact__details__detail__address">
           <address>
-            kanceláře Freya z.s., 2. patro
-            <br />
-            Bolzanova 1, Praha 1 - Nové Město, 110 00
+            Václavské náměstí 837/11, Praha 1, 110 00 (mezi Kobe a McDonalds)
           </address>
         </div>
       </div>
@@ -237,13 +228,14 @@ const sendForm = async () => {
   margin-top: 6rem;
   margin-bottom: 3rem;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   @include md {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   @include lg {
@@ -258,6 +250,7 @@ const sendForm = async () => {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    max-width: 25rem;
 
     &__detail {
       width: 100%;

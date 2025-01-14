@@ -1,9 +1,8 @@
 <template>
   <div class="work__tiles">
     <div class="card work__tiles__tile" v-for="card in cards" :key="card.id">
-      <font-awesome-icon
-        :icon="card.icon"
-        size="7x"
+      <i
+        :class="card.icon"
         class="work__tiles__icon"
       />
 
@@ -29,7 +28,7 @@ const cards: Card[] = [
   },
   {
     id: 1,
-    title: "4 roky terapeutické praxe",
+    title: "6 let terapeutické praxe",
     icon: "fa-solid fa-file-medical",
   },
   {
@@ -58,6 +57,7 @@ const cards: Card[] = [
     color: white;
     vertical-align: middle;
     padding-top: 1rem;
+    font-size: 4rem;
   }
 
   &__tile {
