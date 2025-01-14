@@ -1,5 +1,4 @@
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@use 'abstracts' as *;
 
-@import "base/reset";
-@import "base/typography";
+@forward "base/reset";
+@forward "base/typography";

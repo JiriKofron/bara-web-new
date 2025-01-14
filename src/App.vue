@@ -1,7 +1,9 @@
 <template>
   <main class="container-fluid" ref="mainView">
     <TheNavbar />
-    <router-view></router-view>
+    <div class="content">
+      <router-view></router-view>
+    </div>
     <TheFooter />
   </main>
 </template>
@@ -24,9 +26,8 @@ onMounted(() => {
 <style lang="scss">
 #app {
   width: 100%;
-  max-width: 1400px;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -41,5 +42,15 @@ main {
   padding: 0 !important;
   width: 100%;
   height: 100dvh;
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 </style>
