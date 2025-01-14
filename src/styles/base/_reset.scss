@@ -1,4 +1,4 @@
-@use '../abstracts/mixins' as *;
+@use "../abstracts/mixins";
 
 * {
     margin: 0;
@@ -13,7 +13,7 @@ a {
 html {
     scroll-behavior: smooth;
     font-size: 15px;
-    @include lg {
+    @include mixins.lg {
         font-size: 19px;
     }
 }

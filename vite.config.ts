@@ -16,8 +16,7 @@ export default defineConfig({
       scss: {
         api: 'modern-compiler',
         additionalData: `
-        @use "sass:color";
-        @use "@/styles/abstracts" as *;
+        @import "@/styles/main";
         `,
       },
     }

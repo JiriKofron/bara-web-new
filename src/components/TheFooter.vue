@@ -26,8 +26,8 @@
         <address>
           Václavské náměstí 837/11, Praha 1, 110 00 (mezi Kobe a McDonalds)
         </address>
-        <a href="#" @click="$router.push('/')">www.psenicova.cz</a>
         <span>IČO: 06753493</span>
+        <a href="#" @click="$router.push('/')">www.psenicova.cz</a>
         <span>&copy; Copyright {{ new Date().getFullYear() }}</span>
       </div>
   </footer>
