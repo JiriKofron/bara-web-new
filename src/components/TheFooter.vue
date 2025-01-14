@@ -1,19 +1,25 @@
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+</script>
+
 <template>
   <footer>
       <nav>
-        <a class="nav-link nav-item" href="#" @click="$router.push('/#services')">
+        <a class="nav-link nav-item" href="#" @click="router.push('/#services')">
           Hlavní strana
         </a>
-        <a class="nav-link nav-item" href="#" @click="$router.push('/pricelist')">
+        <a class="nav-link nav-item" href="#" @click="router.push('/pricelist')">
           Ceník
         </a>
-        <a class="nav-link nav-item" href="#" @click="$router.push('/#codex')">
+        <a class="nav-link nav-item" href="#" @click="router.push('/#codex')">
           Kodex
         </a>
-        <a class="nav-link nav-item" href="#" @click="$router.push('/media')">
+        <a class="nav-link nav-item" href="#" @click="router.push('/media')">
           Média
         </a>
-        <a class="nav-link nav-item" href="#" @click="$router.push('/#about')">
+        <a class="nav-link nav-item" href="#" @click="router.push('/#about')">
           O mně
         </a>
       </nav>
@@ -27,7 +33,7 @@
           Václavské náměstí 837/11, Praha 1, 110 00 (mezi Kobe a McDonalds)
         </address>
         <span>IČO: 06753493</span>
-        <a href="#" @click="$router.push('/')">www.psenicova.cz</a>
+        <a href="#" @click="router.push('/')">www.psenicova.cz</a>
         <span>&copy; Copyright {{ new Date().getFullYear() }}</span>
       </div>
   </footer>
@@ -83,5 +89,3 @@ address {
   }
 }
 </style>
-<script setup lang="ts">
-</script>

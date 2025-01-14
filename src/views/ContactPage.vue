@@ -228,13 +228,14 @@ const sendForm = async () => {
   margin-top: 6rem;
   margin-bottom: 3rem;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   @include md {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   @include lg {
@@ -249,6 +250,7 @@ const sendForm = async () => {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    max-width: 25rem;
 
     &__detail {
       width: 100%;

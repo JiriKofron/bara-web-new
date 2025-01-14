@@ -1,9 +1,15 @@
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+</script>
+
 <template>
   <div class="d-flex justify-content-center">
     <button
       class="btn btn-danger btn-lg contact__btn"
       type="button"
-      @click="$router.push('/contact')"
+      @click="router.push('/contact')"
     >
       Chci konzultaci
     </button>

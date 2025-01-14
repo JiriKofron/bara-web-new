@@ -1,6 +1,9 @@
 <script setup>
 import { useWindowScroll } from "@vueuse/core";
 import { ref, watch } from "vue";
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const { y } = useWindowScroll();
 const navbar = ref();
@@ -22,7 +25,7 @@ watch(y, (scrollY) => {
         class="nav-link nav-item"
         data-bs-toggle="collapse"
         data-bs-target="#navbarToggle"
-        @click="$router.push('/')"
+        @click="router.push('/')"
       >
         Domu
       </a>
@@ -31,7 +34,7 @@ watch(y, (scrollY) => {
         data-bs-toggle="collapse"
         data-bs-target="#navbarToggle"
         href="#"
-        @click="$router.push('/#services')"
+        @click="router.push('/#services')"
       >
         Služby
       </a>
@@ -40,7 +43,7 @@ watch(y, (scrollY) => {
         href="#"
         data-bs-toggle="collapse"
         data-bs-target="#navbarToggle"
-        @click="$router.push('/pricelist')"
+        @click="router.push('/pricelist')"
       >
         Ceník
       </a>
@@ -49,7 +52,7 @@ watch(y, (scrollY) => {
         href="#"
         data-bs-toggle="collapse"
         data-bs-target="#navbarToggle"
-        @click="$router.push('/#codex')"
+        @click="router.push('/#codex')"
       >
         Kodex
       </a>
@@ -58,7 +61,7 @@ watch(y, (scrollY) => {
         href="#"
         data-bs-toggle="collapse"
         data-bs-target="#navbarToggle"
-        @click="$router.push('/media')"
+        @click="router.push('/media')"
       >
         Média
       </a>
@@ -67,7 +70,7 @@ watch(y, (scrollY) => {
         data-bs-toggle="collapse"
         data-bs-target="#navbarToggle"
         href="#"
-        @click="$router.push('/#about')"
+        @click="router.push('/#about')"
       >
         O mně
       </a>
@@ -76,7 +79,7 @@ watch(y, (scrollY) => {
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarToggle"
-        @click="$router.push('/contact')"
+        @click="router.push('/contact')"
       >
         Kontakt
       </button>
@@ -96,7 +99,7 @@ watch(y, (scrollY) => {
     <a
       class="navbar-brand px-3 pt-2 text-wrap"
       href="#"
-      @click="$router.push('/')"
+      @click="router.push('/')"
       >Barbora Pšenicová
     </a>
 
@@ -113,19 +116,19 @@ watch(y, (scrollY) => {
     </button>
 
     <div class="navbar-nav d-none d-md-flex navbar__expanded">
-      <a class="nav-link nav-item" href="#" @click="$router.push('/#services')">
+      <a class="nav-link nav-item" href="#" @click="router.push('/#services')">
         Služby
       </a>
-      <a class="nav-link nav-item" href="#" @click="$router.push('/pricelist')">
+      <a class="nav-link nav-item" href="#" @click="router.push('/pricelist')">
         Ceník
       </a>
-      <a class="nav-link nav-item" href="#" @click="$router.push('/#codex')">
+      <a class="nav-link nav-item" href="#" @click="router.push('/#codex')">
         Kodex
       </a>
-      <a class="nav-link nav-item" href="#" @click="$router.push('/media')">
+      <a class="nav-link nav-item" href="#" @click="router.push('/media')">
         Média
       </a>
-      <a class="nav-link nav-item" href="#" @click="$router.push('/#about')">
+      <a class="nav-link nav-item" href="#" @click="router.push('/#about')">
         O mně
       </a>
     </div>
@@ -133,7 +136,7 @@ watch(y, (scrollY) => {
       <button
         class="btn btn-outline-danger"
         type="button"
-        @click="$router.push('/contact')"
+        @click="router.push('/contact')"
       >
         Kontakt
       </button>
